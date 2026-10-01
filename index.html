@@ -1,1 +1,445 @@
+<!--
+EDIT THESE BEFORE PUBLISHING:
 
+Developer Name: Ashutosh Kumar (already set)
+Privacy Email: mail.ashutosh043@gmail.com (already set)
+Website URL (if applicable): (set the canonical link + og:url in <head>)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BREAKUP — Privacy Policy</title>
+<meta name="description" content="Learn how BREAKUP handles privacy, Accessibility Service functionality, advertising, and data while helping users reduce excessive mobile app usage.">
+<!-- <link rel="canonical" href="https://YOUR-WEBSITE-URL/"> -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="BREAKUP — Privacy Policy">
+<meta property="og:description" content="How BREAKUP handles privacy, Accessibility Service, advertising and data.">
+<meta name="theme-color" content="#14173a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* ---------- Design tokens ---------- */
+:root{
+  --navy:#14173a; --navy-2:#1d2152; --indigo:#5b4bdb; --indigo-dark:#4535c0;
+  --lilac:#ece9ff; --bg:#f6f6fb; --card:#fff; --ink:#1b1e3b; --muted:#555a7a;
+  --line:#e1e2ef; --ok:#1f7a5a; --warn:#8a5a00; --warn-bg:#fff6e0;
+  --font:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.7;font-size:1rem}
+a{color:var(--indigo-dark)}
+:focus-visible{outline:3px solid #f5b942;outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;padding:8px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+
+/* ---------- Nav ---------- */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(20,23,58,.96);backdrop-filter:blur(8px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:12px;flex-wrap:wrap}
+.logo{color:#fff;font-weight:800;letter-spacing:.14em;text-decoration:none;font-size:1.1rem}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav ul a{color:#cfd0ee;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:500;font-size:.92rem;display:inline-block}
+.nav ul a:hover{background:rgba(255,255,255,.1);color:#fff}
+@media(max-width:600px){.nav .wrap{padding-top:8px;padding-bottom:8px}.nav ul a{padding:6px 9px;font-size:.84rem}}
+
+/* ---------- Hero ---------- */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:72px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.08;margin:0 0 6px;font-weight:800;letter-spacing:-.02em}
+.hero h1 span{display:block;font-weight:500;color:#b9b4ff;font-size:.55em;letter-spacing:0;margin-top:6px}
+.hero p{color:#d6d7f0;max-width:52ch;font-size:1.08rem}
+.date{display:inline-block;margin-top:8px;padding:8px 16px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-weight:500;font-size:.92rem}
+.shield{justify-self:center;width:min(260px,70%)}
+@media(max-width:800px){.hero{padding:48px 0 64px}.hero .wrap{grid-template-columns:1fr}.shield{width:150px;justify-self:start;order:-1}}
+
+/* ---------- Summary cards ---------- */
+.summary{margin-top:-44px;position:relative}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;list-style:none;padding:0;margin:0}
+.cards li{background:var(--card);border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(20,23,58,.09)}
+.cards .ic{width:44px;height:44px;border-radius:12px;background:var(--lilac);display:grid;place-items:center;margin-bottom:12px}
+.cards svg{width:24px;height:24px;stroke:var(--indigo-dark);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cards h3{margin:0 0 4px;font-size:1.05rem}
+.cards p{margin:0;color:var(--muted);font-size:.93rem;line-height:1.55}
+
+/* ---------- Layout ---------- */
+.layout{display:grid;grid-template-columns:260px 1fr;gap:48px;padding:64px 0}
+@media(max-width:900px){.layout{grid-template-columns:1fr;gap:28px;padding:44px 0}}
+.toc{align-self:start;position:sticky;top:84px;background:var(--card);border-radius:18px;padding:20px;border:1px solid var(--line)}
+@media(max-width:900px){.toc{position:static}}
+.toc h2{font-size:1rem;margin:0 0 10px}
+.toc ol{margin:0;padding-left:20px;font-size:.92rem;line-height:1.9}
+.toc a{text-decoration:none;color:var(--ink)}
+.toc a:hover{color:var(--indigo-dark);text-decoration:underline}
+
+section.block{margin-bottom:44px}
+section.block h2{font-size:1.55rem;line-height:1.25;margin:0 0 12px;letter-spacing:-.01em}
+section.block p,section.block li{max-width:72ch}
+section.block ul{padding-left:22px}
+section.block li{margin-bottom:6px}
+
+.note{border-left:4px solid var(--indigo);background:var(--lilac);padding:14px 18px;border-radius:0 12px 12px 0;margin:16px 0;max-width:72ch}
+.note.warn{border-color:#d99a1e;background:var(--warn-bg);color:#4a3200}
+
+/* Prominent accessibility block */
+.feature{background:var(--navy);color:#e9e9fb;border-radius:24px;padding:32px;margin-bottom:44px}
+.feature h2{color:#fff;margin-top:0}
+.feature a{color:#cbc6ff}
+.feature .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
+.feature .box{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:18px}
+.feature .box h3{margin:0 0 8px;font-size:1.02rem;color:#fff}
+.feature .box ul{margin:0;padding-left:20px}
+.feature .box li{margin-bottom:6px}
+@media(max-width:600px){.feature{padding:22px;border-radius:18px}}
+
+/* Table */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.95rem}
+th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line)}
+th{background:var(--lilac);font-size:.9rem}
+tr:last-child td{border-bottom:0}
+
+.contact{background:var(--card);border-radius:18px;border:1px solid var(--line);padding:24px;max-width:560px}
+.contact dt{font-weight:700;margin-top:10px}
+.contact dd{margin:2px 0 0;color:var(--muted)}
+.contact dt:first-child{margin-top:0}
+
+footer{background:var(--navy);color:#cfd0ee;padding:36px 0;text-align:center}
+footer strong{color:#fff;letter-spacing:.14em;font-size:1.1rem}
+footer p{margin:4px 0}
+
+#top-btn{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;border:0;background:var(--indigo);color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s}
+#top-btn.show{opacity:1;pointer-events:auto}
+#top-btn:hover{background:var(--indigo-dark)}
+#top-btn svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* Scroll reveal (only the summary + feature blocks; JS adds .js) */
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+/* ================= Responsive layer: fluid spacing + breakpoints ================= */
+:root{--gutter:clamp(16px,4vw,32px);--space-section:clamp(36px,6vw,56px);--radius:clamp(14px,2.5vw,20px)}
+html{-webkit-text-size-adjust:100%}
+body{font-size:clamp(.97rem,.93rem + .2vw,1.06rem);overflow-x:hidden}
+img,svg{max-width:100%}
+.wrap{padding-left:max(var(--gutter),env(safe-area-inset-left));padding-right:max(var(--gutter),env(safe-area-inset-right))}
+
+/* Spacing */
+.hero{padding-top:clamp(44px,9vw,84px);padding-bottom:clamp(64px,11vw,104px)}
+.hero p{margin:14px 0 22px}
+.date{margin-top:0}
+.summary{margin-top:clamp(-52px,-6vw,-32px)}
+.cards{gap:clamp(12px,2vw,20px)}
+.cards li{padding:clamp(18px,3vw,26px);border-radius:var(--radius)}
+.layout{padding-top:var(--space-section);padding-bottom:var(--space-section);gap:clamp(24px,5vw,56px)}
+section.block{margin-bottom:var(--space-section)}
+section.block h2{font-size:clamp(1.3rem,1.1rem + 1vw,1.7rem);margin-bottom:14px}
+section.block p{margin:0 0 14px}
+section.block ul{margin:0 0 14px}
+.note{padding:16px 20px;margin:18px 0}
+.feature{padding:clamp(20px,4vw,40px);border-radius:var(--radius);margin-bottom:var(--space-section)}
+.feature .grid{gap:clamp(12px,2vw,20px)}
+.feature .box{padding:clamp(16px,2.5vw,22px)}
+.toc{padding:clamp(16px,3vw,24px);border-radius:var(--radius)}
+.contact{padding:clamp(18px,3vw,28px);border-radius:var(--radius)}
+th,td{padding:clamp(10px,2vw,14px) clamp(12px,2vw,18px)}
+footer{padding:clamp(28px,5vw,44px) 0 calc(clamp(28px,5vw,44px) + env(safe-area-inset-bottom))}
+#top-btn{right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom))}
+a,button{-webkit-tap-highlight-color:transparent}
+.toc a,.nav ul a{min-height:36px}
+
+/* Tablet (<= 900px): TOC becomes a two-column block above content */
+@media(max-width:900px){
+  .toc ol{columns:2;column-gap:28px}
+  .toc li{break-inside:avoid}
+  .hero .wrap{gap:24px}
+}
+
+/* Large phone (<= 600px): nav stacks, links scroll sideways */
+@media(max-width:600px){
+  .nav .wrap{flex-direction:column;align-items:flex-start;gap:0;padding-top:10px;padding-bottom:6px}
+  .nav nav{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .nav nav::-webkit-scrollbar{display:none}
+  .nav ul{flex-wrap:nowrap;width:max-content;gap:2px;margin-left:-9px}
+  .nav ul a{white-space:nowrap}
+  html{scroll-padding-top:110px}
+  .toc ol{columns:1}
+  .cards{grid-template-columns:1fr 1fr}
+  .feature .grid{grid-template-columns:1fr}
+}
+
+/* Small phone (<= 420px): single column, tighter type */
+@media(max-width:420px){
+  .cards{grid-template-columns:1fr}
+  .hero h1{font-size:2.1rem}
+  .hero p{font-size:1rem}
+  .date{font-size:.85rem;padding:7px 14px}
+  .note{padding:14px 16px}
+}
+
+/* Wide desktop (>= 1200px) */
+@media(min-width:1200px){
+  .wrap{max-width:1180px}
+  .layout{grid-template-columns:280px 1fr}
+}
+
+/* ================= Fixes: Accessibility block, table, contact ================= */
+.feature,.feature *{min-width:0;overflow-wrap:anywhere}
+.feature .grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.feature p,.feature li{max-width:none}
+.feature .box{overflow:hidden}
+.contact dd,.contact a{overflow-wrap:anywhere;word-break:break-word}
+.contact dd{font-size:1.02rem}
+.tablewrap{overflow:visible}
+@media(max-width:700px){
+  .tablewrap{border:0;background:transparent}
+  table,thead,tbody,tr,td{display:block;width:100%;min-width:0}
+  thead{position:absolute;left:-9999px}
+  tr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 16px;margin-bottom:12px}
+  td{border:0;padding:9px 0;display:flex;gap:12px;justify-content:space-between;align-items:baseline;text-align:right;border-bottom:1px solid var(--line)}
+  td:last-child{border-bottom:0}
+  td::before{content:attr(data-label);font-weight:700;color:var(--muted);font-size:.82rem;text-align:left;flex:0 0 42%}
+  td:first-child{font-weight:700}
+}
+@media(max-width:420px){
+  .feature{padding:18px 16px}
+  .feature h2{font-size:1.3rem}
+  .contact{padding:18px 16px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="BREAKUP — back to top">BREAKUP</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#information">Privacy Policy</a></li>
+        <li><a href="#data-table">Data &amp; Privacy</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div id="top"></div>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <h1 id="hero-title">BREAKUP<span>Privacy Policy</span></h1>
+      <p>Your privacy matters. Learn how BREAKUP handles information while helping you take control of your digital habits.</p>
+      <span class="date">Effective Date: October 2, 2026</span>
+    </div>
+    <svg class="shield" viewBox="0 0 200 220" role="img" aria-label="Shield with a checkmark">
+      <path d="M100 10 L180 40 V110 C180 160 145 192 100 210 C55 192 20 160 20 110 V40 Z" fill="#2a2f6e" stroke="#8f84ff" stroke-width="4"/>
+      <path d="M100 30 L162 53 V110 C162 148 136 174 100 190 Z" fill="#5b4bdb" opacity=".55"/>
+      <path d="M68 108 L92 132 L136 84" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+<!-- Quick summary -->
+<section class="summary" aria-labelledby="sum-title">
+  <div class="wrap">
+    <h2 id="sum-title" class="visually-hidden" style="position:absolute;left:-999px">Quick privacy summary</h2>
+    <ul class="cards">
+      <li class="reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/><path d="M3 3l18 18"/></svg></div>
+        <h3>No Account Required</h3><p>No sign-up or login. BREAKUP does not ask for your name, email or password.</p>
+      </li>
+      <li class="reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+        <h3>Your Data Stays Local</h3><p>BREAKUP has no backend server of its own to store your information.</p>
+      </li>
+      <li class="reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15l3-6 3 6M8 13h4M16 9v6"/></svg></div>
+        <h3>AdMob Advertising</h3><p>Ads are shown by Google AdMob, which processes data under Google's own policies.</p>
+      </li>
+      <li class="reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 18h4M5 9l-2 3 2 3M19 9l2 3-2 3"/></svg></div>
+        <h3>Accessibility Service</h3><p>Used only to detect selected apps so BREAKUP can block them.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#information">Information We Collect</a></li>
+      <li><a href="#use">How BREAKUP Uses Information</a></li>
+      <li><a href="#accessibility">Accessibility Service</a></li>
+      <li><a href="#installed">Installed Applications</a></li>
+      <li><a href="#advertising">Advertising</a></li>
+      <li><a href="#sharing">Data Sharing</a></li>
+      <li><a href="#security">Data Storage &amp; Security</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#choices">Your Choices</a></li>
+      <li><a href="#third-party">Third-Party Services</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <article>
+    <section class="block" id="information" aria-labelledby="h-information">
+      <h2 id="h-information">Information We Collect</h2>
+      <p>This policy describes BREAKUP, an Android app that helps you reduce excessive app usage. It separates what BREAKUP itself handles from what third-party services may process.</p>
+      <div class="note"><strong>Handled by BREAKUP.</strong> BREAKUP does not require an account or login, and it does not directly collect your name, email address, password, phone number, date of birth or profile information. BREAKUP does not operate its own backend or server.</div>
+      <div class="note warn"><strong>Processed by third parties.</strong> BREAKUP uses Google AdMob to show ads. AdMob may collect and process information as described in the <a href="#advertising">Advertising</a> section. BREAKUP does not use Firebase Analytics or Firebase Crashlytics.</div>
+    </section>
+
+    <section class="block" id="use" aria-labelledby="h-use">
+      <h2 id="h-use">How BREAKUP Uses Information</h2>
+      <p>BREAKUP works with the apps you choose and the settings you create on your device. It uses these only to provide its app-blocking features. It does not use them to create user profiles, and it has no server to send them to.</p>
+      <p>The app requires internet access mainly so that advertisements can be displayed. It does not currently require notification permission and does not provide notification-based features.</p>
+    </section>
+
+    <section class="feature reveal" id="accessibility" aria-labelledby="h-access">
+      <h2 id="h-access">Accessibility Service</h2>
+      <p>BREAKUP uses Android's Accessibility Service to detect the currently accessed application so that the app can enforce the user's selected app-blocking rules. This functionality is essential to the app's core purpose. It is not offered as a disability-assistance feature.</p>
+      <div class="grid">
+        <div class="box"><h3>Why it is required</h3>
+          <ul><li>Blocking an app requires knowing when that app is opened.</li><li>Without the service, BREAKUP's main feature cannot work.</li></ul></div>
+        <div class="box"><h3>What it does</h3>
+          <ul><li>Detects when one of your selected apps is being accessed.</li><li>Lets BREAKUP apply your blocking rules at that moment.</li></ul></div>
+        <div class="box"><h3>What BREAKUP does not use it for</h3>
+          <ul><li>Reading passwords</li><li>Reading banking information</li><li>Capturing keystrokes</li><li>Collecting personal messages</li><li>Monitoring you for advertising</li></ul></div>
+        <div class="box"><h3>Where the data goes</h3>
+          <p style="margin:0">BREAKUP does not operate its own backend for storing Accessibility Service information, and it does not upload this information to any server of its own.</p></div>
+      </div>
+      <p style="margin-bottom:0;margin-top:18px">You can turn the service off at any time in your device's Android settings. Blocking will then stop working.</p>
+    </section>
+
+    <section class="block" id="installed" aria-labelledby="h-installed">
+      <h2 id="h-installed">Installed Applications</h2>
+      <p>BREAKUP identifies relevant installed applications on your device using Android's launcher-app query mechanism. This allows you to see a list of apps and choose which ones to block. This information is used for app selection and blocking functionality on your device.</p>
+    </section>
+
+    <section class="block" id="advertising" aria-labelledby="h-ads">
+      <h2 id="h-ads">Advertising</h2>
+      <p>BREAKUP displays advertisements through Google AdMob. AdMob may collect and process information, such as device identifiers and ad interaction data, in accordance with Google's own policies and your applicable advertising settings. This processing is carried out by Google, not by BREAKUP.</p>
+      <p>To learn more, read <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy (opens in a new tab)</a>. You can manage ad personalization in your Android device's Google settings.</p>
+    </section>
+
+    <section class="block" id="sharing" aria-labelledby="h-sharing">
+      <h2 id="h-sharing">Data Sharing</h2>
+      <p>BREAKUP does not sell information and has no backend through which it shares your information with others. The only third-party service involved is Google AdMob, which may process information as described above.</p>
+    </section>
+
+    <section class="block" id="security" aria-labelledby="h-security">
+      <h2 id="h-security">Data Storage &amp; Security</h2>
+      <p>BREAKUP uses reasonable measures to protect the information handled by the application. However, no electronic system can be guaranteed to be 100% secure.</p>
+    </section>
+
+    <section class="block" id="children" aria-labelledby="h-children">
+      <h2 id="h-children">Children's Privacy</h2>
+      <p>BREAKUP is not specifically directed toward children. Users should not provide personal information through the app. If you believe a child has provided personal information in connection with the app, please contact us using the details below.</p>
+    </section>
+
+    <section class="block" id="choices" aria-labelledby="h-choices">
+      <h2 id="h-choices">Your Choices</h2>
+      <ul>
+        <li>Choose which apps BREAKUP blocks, and change that at any time.</li>
+        <li>Disable the Accessibility Service in Android settings.</li>
+        <li>Adjust ad personalization in your device's Google settings.</li>
+        <li>Uninstall BREAKUP at any time.</li>
+      </ul>
+      <p>There are no user accounts, so there is no account to delete.</p>
+    </section>
+
+    <section class="block" id="third-party" aria-labelledby="h-tp">
+      <h2 id="h-tp">Third-Party Services</h2>
+      <p>Third-party services, including Google AdMob, have their own privacy policies and practices. BREAKUP does not control them and is not responsible for how they handle information. Please review their policies.</p>
+    </section>
+
+    <section class="block" id="data-table" aria-labelledby="h-table">
+      <h2 id="h-table">Data Practices Summary</h2>
+      <div class="tablewrap" role="region" aria-label="Data practices table">
+        <table>
+          <thead><tr><th scope="col">Data / Functionality</th><th scope="col">BREAKUP's Use</th><th scope="col">Stored by BREAKUP?</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Data / Functionality">Account information</td><td data-label="BREAKUP&#39;s Use">No account system</td><td data-label="Stored by BREAKUP?">No</td></tr>
+            <tr><td data-label="Data / Functionality">Name/email</td><td data-label="BREAKUP&#39;s Use">Not collected directly</td><td data-label="Stored by BREAKUP?">No</td></tr>
+            <tr><td data-label="Data / Functionality">Accessibility Service</td><td data-label="BREAKUP&#39;s Use">App blocking</td><td data-label="Stored by BREAKUP?">No own server storage</td></tr>
+            <tr><td data-label="Data / Functionality">Installed app information</td><td data-label="BREAKUP&#39;s Use">App selection/blocking</td><td data-label="Stored by BREAKUP?">Local functionality</td></tr>
+            <tr><td data-label="Data / Functionality">Advertising information</td><td data-label="BREAKUP&#39;s Use">AdMob</td><td data-label="Stored by BREAKUP?">Third-party processing</td></tr>
+            <tr><td data-label="Data / Functionality">Firebase Analytics</td><td data-label="BREAKUP&#39;s Use">Not used</td><td data-label="Stored by BREAKUP?">No</td></tr>
+            <tr><td data-label="Data / Functionality">Firebase Crashlytics</td><td data-label="BREAKUP&#39;s Use">Not used</td><td data-label="Stored by BREAKUP?">No</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.9rem;color:var(--muted)">Advertising information may be collected and processed by Google AdMob under Google's policies.</p>
+    </section>
+
+    <section class="block" id="changes" aria-labelledby="h-changes">
+      <h2 id="h-changes">Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. The "Last updated" date at the bottom of this page shows when it last changed. Please check back periodically.</p>
+    </section>
+
+    <section class="block" id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact">Contact Us</h2>
+      <p>Questions about this Privacy Policy? Get in touch.</p>
+      <dl class="contact">
+        <dt>Developer</dt><dd>Ashutosh Kumar</dd>
+        <dt>Privacy Email</dt><dd><a href="mailto:mail.ashutosh043@gmail.com">mail.ashutosh043@gmail.com</a></dd>
+      </dl>
+    </section>
+  </article>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>BREAKUP</strong></p>
+    <p>Reconnect With Life.</p>
+    <p>Privacy Policy<br>Last updated: October 2, 2026</p>
+  </div>
+</footer>
+
+<button id="top-btn" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script>
+/* Progressive enhancement: back-to-top button + gentle reveal. No tracking, no cookies. */
+(function(){
+  var btn=document.getElementById('top-btn');
+  window.addEventListener('scroll',function(){btn.classList.toggle('show',window.scrollY>500)},{passive:true});
+  btn.addEventListener('click',function(){window.scrollTo({top:0})});
+  /* In-page links: scroll in place instead of navigating. Prevents reload errors inside
+     sandboxed previews/iframes; works the same on a normal hosted page. */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#"]');
+    if(!a)return;
+    var id=a.getAttribute('href').slice(1);
+    var t=id?document.getElementById(id):document.body;
+    if(!t)return;
+    e.preventDefault();
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(id==='top'){window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});return;}
+    t.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+    if(!t.hasAttribute('tabindex'))t.setAttribute('tabindex','-1');
+    t.focus({preventScroll:true});
+  });
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce && 'IntersectionObserver' in window){
+    document.documentElement.classList.add('js');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  }
+})();
+</script>
+</body>
+</html>
